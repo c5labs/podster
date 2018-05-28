@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Block type table schema
+This file is used by concrete5 to create the block types database table(s).
+You can find information on all of the different field types and the general schema here https://goo.gl/P92EY1
+-->
+<schema
+    xmlns="http://www.concrete5.org/doctrine-xml/0.5"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.concrete5.org/doctrine-xml/0.5 http://concrete5.github.io/doctrine-xml/doctrine-xml-0.5.xsd">
+
+    <table name="podsterShows">
+        <!-- The bID column is ALWAYS required !-->
+        <field name="id" type="integer">
+            <unsigned/>
+            <autoincrement/>
+            <key/>
+        </field>
+
+        <field name="title" type="string"></field>
+        <field name="linkType" type="string">
+            <default value="page"/>
+        </field>
+        <field name="linkCID" type="integer">
+            <default value="1"/>
+        </field>
+        <field name="linkUrl" type="string"></field>
+        <field name="subTitle" type="string"></field>
+        <field name="description" type="text"></field>
+        <field name="author" type="string"></field>
+        <field name="copyright" type="string"></field>
+        <field name="ownerName" type="string"></field>
+        <field name="ownerEmail" type="string"></field>
+        <field name="managingEditor" type="string"></field>
+        <field name="categories" type="text"></field>
+        <field name="keywords" type="text"></field>
+        <field name="language" type="string">
+            <default value="en-US"/>
+        </field>
+
+        <field name="coverFileID" type="integer">
+            <unsigned/>
+        </field>
+    </table>
+
+    <table name="podsterEpisodes">
+        <!-- The bID column is ALWAYS required !-->
+        <field name="id" type="integer">
+            <unsigned/>
+            <autoincrement/>
+            <key/>
+        </field>
+
+        <field name="showID" type="integer">
+            <unsigned/>
+        </field>
+
+        <field name="pubDate" type="datetime"></field>
+        <field name="title" type="string"></field>
+        <field name="subTitle" type="string"></field>
+        <field name="linkType" type="string">
+            <default value="page"/>
+        </field>
+        <field name="linkCID" type="integer">
+            <default value="1"/>
+        </field>
+        <field name="linkUrl" type="string"></field>
+        <field name="description" type="text"></field>
+        <field name="categories" type="text"></field>
+        <field name="keywords" type="text"></field>
+        <field name="explicit" type="string"></field>
+        <field name="duration" type="string"></field>
+        <field name="transcriptFileID" type="string"></field>
+
+        <field name="coverFileID" type="integer">
+            <unsigned/>
+        </field>
+
+        <field name="mp3FileID" type="integer">
+            <unsigned/>
+        </field>
+    </table>
+
+    <table name="podsterStats">
+        <field name="type" type="string"></field>
+        <field name="showID" type="integer">
+            <unsigned/>
+        </field>
+        <field name="episodeID" type="integer">
+            <unsigned/>
+        </field>
+        <field name="createdAt" type="datetime"></field>
+        <field name="userAgent" type="string"></field>
+        <field name="remoteAddress" type="string"></field>
+        <index name="identifier">
+          <col>type</col>
+          <col>showID</col>
+          <col>episodeID</col>
+        </index>
+    </table>
+
+</schema>

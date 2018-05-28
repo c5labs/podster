@@ -1,0 +1,16 @@
+{
+    "name": "c5labs/podster_package",
+    "description": "Run a podcast from concrete5.",
+    "type": "concrete5-package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Oliver Green",
+            "email": "oliver@c5labs.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "composer/installers": "dev-concrete5-installation-path-updates"
+    }
+}

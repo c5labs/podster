@@ -1,0 +1,9 @@
+// Missing From Show
+<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml" href="http://feeds.feedburner.com/spipodcast" />
+<feedburner:info uri="spipodcast" />
+<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://pubsubhubbub.appspot.com/" />
+
+// Missing From Episode
+<wfw:commentRss />
+<slash:comments>1</slash:comments>
+<comments>https://www.smartpassiveincome.com/podcasts/work-less-and-make-more-james-schramko/#comments</comments>
